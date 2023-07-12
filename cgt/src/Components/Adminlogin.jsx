@@ -8,7 +8,7 @@ function Adminlogin() {
     const[error,setError]=useState('')
 
   
-
+ const[name,setName]=useState();
 
     const submitAdminLogin=(e)=>{
   
