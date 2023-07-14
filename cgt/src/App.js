@@ -1,13 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Adminlogin from './Components/Adminlogin';
+import "./App.css";
+import Adminlogin from "./Components/Adminlogin";
+import HomePage from "./Components/HomePage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-   
-     <>
-     <Adminlogin/>
-     </>
+    <>
+      <Routes>
+        <Route path="/" element={<Adminlogin />}></Route>
+        <Route path="/home" element={<HomePage />}></Route>
+      </Routes>
+    </>
   );
 }
 

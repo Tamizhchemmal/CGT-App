@@ -1,0 +1,46 @@
+.home-card {
+  display: flex;
+  justify-content: center;
+}
+
+.home-crd1,
+.home-crd2,
+.home-crd3 {
+  width: 20%;
+  box-sizing: border-box;
+  border: 2px solid #2f217e;
+  border-radius: 12px;
+  display: flex;
+  padding: 10px;
+  margin: 15px;
+}
+
+.home-count1,
+.home-icon1,
+.home-count2,
+.home-icon2,
+.home-count3,
+.home-icon3 {
+  text-align: center !important;
+}
+
+.icon1,
+.icon2,
+.icon3 {
+  font-size: 86px !important;
+  margin: 5px;
+}
+
+.home-row2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.home-search {
+  margin-left: 30px !important;
+}
+
+.batch-btn {
+  margin-right: 30px !important;
+}
