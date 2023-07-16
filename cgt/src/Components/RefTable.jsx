@@ -113,6 +113,15 @@ export default function RefTable() {
   const handleedit = (e) => {
     alert("button");
   };
+  // Delete referral
+  const deleteref = async (id) => {
+    await axios.delete(
+      "https://64a587de00c3559aa9bfdbd4.mockapi.io/refData/" + id
+    );
+    alert("referral deleted");
+
+    callApiData();
+  };
 
   return (
     <>
@@ -193,7 +202,10 @@ export default function RefTable() {
                             id="edit-icon"
                             onClick={handleedit}
                           />
-                          <MdDelete id="dlt-icon" onClick={handleedit} />
+                          <MdDelete
+                            id="dlt-icon"
+                            onClick={() => deleteref(apiData.id)}
+                          />
                         </TableCell>
                       </TableRow>
                     );

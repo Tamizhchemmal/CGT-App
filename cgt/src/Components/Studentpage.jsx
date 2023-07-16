@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../Css/Referralstyle.css";
 import {
   Container,
@@ -9,11 +9,6 @@ import {
   ModalTitle,
   CloseButton,
 } from "react-bootstrap";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { MdManageSearch } from "react-icons/md";
 import axios from "axios";
 import { FcSearch } from "react-icons/fc";
 
@@ -74,6 +69,8 @@ function Studentpage() {
     const eDate = selectedEndDate.toISOString().substr(0, 10);
     setEndDate(eDate);
     // setInput({ ...input, startdate: sDate, enddate: eDate });
+
+    //Search function
   };
 
   return (
@@ -83,7 +80,7 @@ function Studentpage() {
           <div className="card-refdetails">
             <Container>
               <div className="head-ref">
-                <div id="heading-ref">Referral List</div>
+                <div id="heading-ref">Student List</div>
 
                 <div
                   style={{
@@ -105,8 +102,9 @@ function Studentpage() {
                   </button>
                 </div>
               </div>
+              <hr></hr>
 
-              {/* /modal */}
+              {/* /modal popup for student Creation */}
               <Modal
                 show={show}
                 onHide={handleClose}

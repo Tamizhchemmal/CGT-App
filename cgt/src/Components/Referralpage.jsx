@@ -84,7 +84,7 @@ function Referralpage() {
                       placeholder="Search Referral"
                       id="searchbar-ref"
                     ></input>
-                    <FcSearch id="search-icon" />
+                    <FcSearch id="search-icon" title="Search" />
                   </div>
                   <button className="create ref" onClick={handleShow}>
                     Create Referral
