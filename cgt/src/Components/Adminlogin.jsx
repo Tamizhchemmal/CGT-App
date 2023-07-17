@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import "../Css/login.css";
+import boss from "../Assets/Images/boss.png";
+import { useNavigate } from "react-router-dom";
+
 
 import { TextField, Button } from "@mui/material";
 function Adminlogin() {
@@ -14,7 +17,9 @@ function Adminlogin() {
     if (email === "abc@gmail.com" && password === "12345") {
       alert("success");
       setError("");
-      navigate("/home");
+
+      navigate("/referralpage");
+
     } else if (email !== "abc@gmail.com") {
       setError("Incorrect Email");
       return error;
@@ -30,7 +35,16 @@ function Adminlogin() {
     <>
       <div className="main-page">
         <div className="login-card">
-          <h2>Admin Login</h2>
+
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img src={boss} id="logo-admin"></img>
+          </div>
+          <div className="style-heading">
+            <span>Career Guidance Technologies</span>
+          </div>
+
+          {/* <h2>Login</h2> */}
+
           <div>
             <form>
               <div className="inputs-admin">
