@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Css/login.css";
+import boss from "../Assets/Images/boss.png";
 import { useNavigate } from "react-router-dom";
 
 import { TextField, Button } from "@mui/material";
@@ -29,9 +30,14 @@ function Adminlogin() {
     <>
       <div className="main-page">
         <div className="login-card">
-          <span>Career Guidance Technologies</span>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <img src={boss} id="logo-admin"></img>
+          </div>
+          <div className="style-heading">
+            <span>Career Guidance Technologies</span>
+          </div>
 
-          <h2>Admin Login</h2>
+          {/* <h2>Login</h2> */}
           <div>
             <form>
               <div className="inputs-admin">

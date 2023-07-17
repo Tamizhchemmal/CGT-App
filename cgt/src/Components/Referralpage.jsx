@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import "../Css/Referralstyle.css";
-import {} from "lord-icon-element";
 import {
   Container,
   Dropdown,

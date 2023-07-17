@@ -46,7 +46,7 @@ const columns = [
   },
   {
     id: "noofreferral",
-    label: "No Of Referrals",
+    label: "No of Referrals",
     minWidth: 170,
     align: "center",
     format: (value) => value.toLocaleString("en-US"),
@@ -122,6 +122,15 @@ export default function RefTable() {
 
     callApiData();
   };
+  var count;
+
+  const Type = ({ count }) => {
+    if (count <= 10) {
+      return <div>Silver</div>;
+    } else if ((count) => 10) {
+      return <div>Gold</div>;
+    }
+  };
 
   return (
     <>
@@ -191,7 +200,8 @@ export default function RefTable() {
                           style={{ fontSize: 16 }}
                           onClick={opnetable}
                         >
-                          GOLD
+                          {" "}
+                          <Type count={15} />
                         </TableCell>
                         <TableCell
                           align="center"
