@@ -9,10 +9,12 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import Button from "@mui/material/Button";
 import { AppBar } from "@mui/material";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showBars, setShowbars] = useState(true);
+  const navigate = useNavigate();
 
   const HandleOpen = () => {
     setShowSidebar(true);
@@ -38,6 +40,9 @@ export default function NavBar() {
                   variant="text"
                   endIcon={<HomeIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/home");
+                  }}
                 >
                   Home
                 </Button>
@@ -47,6 +52,9 @@ export default function NavBar() {
                   variant="text"
                   endIcon={<ContactsIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/referralpage");
+                  }}
                 >
                   Referral
                 </Button>
@@ -56,6 +64,9 @@ export default function NavBar() {
                   variant="text"
                   endIcon={<ThreePIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/studentpage");
+                  }}
                 >
                   Student
                 </Button>
@@ -74,6 +85,9 @@ export default function NavBar() {
                   variant="text"
                   endIcon={<LogoutIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/");
+                  }}
                 >
                   Logout
                 </Button>
@@ -166,7 +180,7 @@ export default function NavBar() {
           </div>
           </div>
         )} */}
-      </AppBar> 
+      </AppBar>
     </>
   );
 }

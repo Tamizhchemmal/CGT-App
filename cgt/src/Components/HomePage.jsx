@@ -12,10 +12,9 @@ import IconButton from "@mui/material/IconButton";
 
 import "../Css/HomePage.css";
 import NavBar from "./NavBar";
-
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
- 
   return (
     <>
       <div className="home-page">
@@ -49,36 +48,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="home-row2">
-          <div className="home-search">
-            <Paper
-              component="form"
-              sx={{
-                p: "2px 4px",
-                display: "flex",
-                alignItems: "center",
-                width: 300,
-              }}
-              className="home-search"
-            >
-              <InputBase
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="Search"
-                inputProps={{ "aria-label": "search google maps" }}
-                
-              />
-              <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-                <SearchIcon />
-              </IconButton>
-            </Paper>
-          </div>
-          <div className="batch-btn">
-            <Button variant="contained" endIcon={<ControlPointIcon />}>
-              Batch
-            </Button>
-          </div>
-        </div>
-        
       </div>
     </>
   );

@@ -14,6 +14,7 @@ import { MdManageSearch } from "react-icons/md";
 import axios from "axios";
 import RefTable from "./RefTable";
 import { FcSearch } from "react-icons/fc";
+import NavBar from "./NavBar";
 
 function Referralpage() {
   const [show, setShow] = useState(false);
@@ -64,6 +65,7 @@ function Referralpage() {
   return (
     <>
       <div>
+        <NavBar />
         <div className="crd-bg">
           <div className="card-refdetails">
             <Container>

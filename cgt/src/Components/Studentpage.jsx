@@ -8,9 +8,11 @@ import {
   Button,
   ModalTitle,
   CloseButton,
+  Navbar,
 } from "react-bootstrap";
 import axios from "axios";
 import { FcSearch } from "react-icons/fc";
+import NavBar from "./NavBar";
 
 function Studentpage() {
   const [show, setShow] = useState(false);
@@ -76,6 +78,7 @@ function Studentpage() {
   return (
     <>
       <div>
+        <NavBar />
         <div className="crd-bg">
           <div className="card-refdetails">
             <Container>
