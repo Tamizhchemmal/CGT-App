@@ -1,20 +1,25 @@
 import React, { useState } from "react";
+
 import "../Css/login.css";
 import boss from "../Assets/Images/boss.png";
 import { useNavigate } from "react-router-dom";
+
 
 import { TextField, Button } from "@mui/material";
 function Adminlogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   const submitAdminLogin = (e) => {
     if (email === "abc@gmail.com" && password === "12345") {
       alert("success");
       setError("");
+
       navigate("/referralpage");
+
     } else if (email !== "abc@gmail.com") {
       setError("Incorrect Email");
       return error;
@@ -30,6 +35,7 @@ function Adminlogin() {
     <>
       <div className="main-page">
         <div className="login-card">
+
           <div style={{ display: "flex", justifyContent: "center" }}>
             <img src={boss} id="logo-admin"></img>
           </div>
@@ -38,6 +44,7 @@ function Adminlogin() {
           </div>
 
           {/* <h2>Login</h2> */}
+
           <div>
             <form>
               <div className="inputs-admin">
