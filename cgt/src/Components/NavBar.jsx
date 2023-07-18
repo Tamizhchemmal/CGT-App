@@ -9,6 +9,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import Button from "@mui/material/Button";
 import { AppBar } from "@mui/material";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -23,6 +24,8 @@ export default function NavBar() {
     setShowbars(true);
   };
 
+  const navigate = useNavigate();
+
   return (
     <>
       <AppBar position="sticky">
@@ -36,8 +39,11 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<HomeIcon />}
+                  startIcon={<HomeIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/home");
+                  }}
                 >
                   Home
                 </Button>
@@ -45,8 +51,11 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<ContactsIcon />}
+                  startIcon={<ContactsIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/referralpage");
+                  }}
                 >
                   Referral
                 </Button>
@@ -54,8 +63,11 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<ThreePIcon />}
+                  startIcon={<ThreePIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/studentpage");
+                  }}
                 >
                   Student
                 </Button>
@@ -63,7 +75,7 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<PhotoCameraFrontIcon />}
+                  startIcon={<PhotoCameraFrontIcon />}
                   className="navbtn-icon"
                 >
                   Trainer
@@ -74,99 +86,18 @@ export default function NavBar() {
                   variant="text"
                   endIcon={<LogoutIcon />}
                   className="navbtn-icon"
+                  onClick={() => {
+                    navigate("/");
+                  }}
                 >
                   Logout
                 </Button>
               </li>
             </ul>
-            {/* <div className="burger">
-              <input type="checkbox" id="check" hidden></input>
-              <label
-                htmlFor="check"
-                className="burger-icon"
-                onClick={HandleOpen}
-                style={{ display: showBars ? "block" : "none" }}
-              >
-                <FaBars />
-              </label>
-            </div> */}
+          
           </div>
         </div>
-        {/* {showSidebar && (
-          <div className="dropdwn" id="drop">
-            <div className="cls-btn">
-              <input type="checkbox" id="close" hidden></input>
-              <label
-                htmlFor="close"
-                className="close-icon"
-                onClick={HandleClose}
-              >
-                <FaTimes />
-              </label>
-            </div>
-            <div className="nav-btn">
-            <ul className="btn-list-dropdown">
-              <li>
-                <Button
-                  variant="text"
-                  endIcon={<HomeIcon />}
-                  className="navbtn-icon"
-                >
-                  Home
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="text"
-                  endIcon={<ContactsIcon />}
-                  className="navbtn-icon"
-                >
-                  Referral
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="text"
-                  endIcon={<ThreePIcon />}
-                  className="navbtn-icon"
-                >
-                  Student
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="text"
-                  endIcon={<PhotoCameraFrontIcon />}
-                  className="navbtn-icon"
-                >
-                  Trainer
-                </Button>
-              </li>
-              <li>
-                <Button
-                  variant="text"
-                  endIcon={<LogoutIcon />}
-                  className="navbtn-icon"
-                >
-                  Logout
-                </Button>
-              </li>
-            </ul>
-            <div className="burger">
-              <input type="checkbox" id="check" hidden></input>
-              <label
-                htmlFor="check"
-                className="burger-icon"
-                onClick={HandleOpen}
-                style={{ display: showBars ? "block" : "none" }}
-              >
-                <FaBars />
-              </label>
-            </div>
-          </div>
-          </div>
-        )} */}
-      </AppBar> 
+      </AppBar>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Css/Referralstyle.css";
+import NavBar from "./NavBar";
 import {
   Container,
   Dropdown,
@@ -76,6 +77,7 @@ function Studentpage() {
   return (
     <>
       <div>
+        <NavBar />
         <div className="crd-bg">
           <div className="card-refdetails">
             <Container>
@@ -92,7 +94,7 @@ function Studentpage() {
                   <div className="search-full">
                     <input
                       type="search"
-                      placeholder="Search Referral"
+                      placeholder="Search Student"
                       id="searchbar-ref"
                     ></input>
                     <FcSearch id="search-icon" />
@@ -137,7 +139,7 @@ function Studentpage() {
                             name="fullname"
                             placeholder="Fullname"
                             autoComplete="new-password"
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                             required
                           ></input>
                         </div>
@@ -149,7 +151,7 @@ function Studentpage() {
                             placeholder="Mobile Number"
                             pattern="[6789][0-9]{9}"
                             autoComplete="new-password"
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                             required
                           ></input>
                         </div>
@@ -161,7 +163,7 @@ function Studentpage() {
                             placeholder="Email Address"
                             pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                             required
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                           ></input>
                         </div>
                         <div className="inputstudent">
@@ -171,7 +173,7 @@ function Studentpage() {
                             name="companyname"
                             placeholder="Company Name"
                             autoComplete="off"
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                             required
                           ></input>
                         </div>
@@ -182,7 +184,7 @@ function Studentpage() {
                             name="collegename"
                             placeholder="College Name"
                             autoComplete="off"
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                             required
                           ></input>
                         </div>
@@ -192,7 +194,7 @@ function Studentpage() {
                             name="yearofpassedout"
                             placeholder="Year Of PassedOut"
                             autoComplete="off"
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                             required
                           ></input>
                         </div>
@@ -226,7 +228,7 @@ function Studentpage() {
                             value={endDate}
                             readOnly
                             disabled
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                           />
                         </div>
                         <div>
@@ -235,7 +237,7 @@ function Studentpage() {
                             name="referralname"
                             className="referaldropdown"
                             required
-                            // onChange={handleChange}
+                            //onChange={handleChange}
                           >
                             <option value="Referral name">Referral name</option>
                             {refList.map((data, index) => (
