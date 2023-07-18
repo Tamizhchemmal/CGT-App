@@ -38,7 +38,7 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<HomeIcon />}
+                  // endIcon={<HomeIcon />}
                   className="navbtn-icon"
                   onClick={() => {
                     navigate("/home");
@@ -50,7 +50,7 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<ContactsIcon />}
+                  // endIcon={<ContactsIcon />}
                   className="navbtn-icon"
                   onClick={() => {
                     navigate("/referralpage");
@@ -62,7 +62,7 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<ThreePIcon />}
+                  // endIcon={<ThreePIcon />}
                   className="navbtn-icon"
                   onClick={() => {
                     navigate("/studentpage");
@@ -74,7 +74,7 @@ export default function NavBar() {
               <li>
                 <Button
                   variant="text"
-                  endIcon={<PhotoCameraFrontIcon />}
+                  // endIcon={<PhotoCameraFrontIcon />}
                   className="navbtn-icon"
                 >
                   Trainer
@@ -87,6 +87,7 @@ export default function NavBar() {
                   className="navbtn-icon"
                   onClick={() => {
                     navigate("/");
+                    localStorage.removeItem("role");
                   }}
                 >
                   Logout
