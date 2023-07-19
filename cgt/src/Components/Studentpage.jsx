@@ -13,6 +13,7 @@ import {
 import axios from "axios";
 import { FcSearch } from "react-icons/fc";
 import NavBar from "./NavBar";
+import StudentTable from "./StudentTable";
 
 function Studentpage() {
   const [show, setShow] = useState(false);
@@ -171,8 +172,8 @@ function Studentpage() {
                           <input
                             type="text"
                             id="input-comp"
-                            name="companyname"
-                            placeholder="Company Name"
+                            name="degree"
+                            placeholder="Degree"
                             autoComplete="off"
                             // onChange={handleChange}
                             required
@@ -189,6 +190,7 @@ function Studentpage() {
                             required
                           ></input>
                         </div>
+
                         <div className="inputstudent">
                           <input
                             type="number"
@@ -264,17 +266,31 @@ function Studentpage() {
                             ))}
                           </select>
                         </div>
+                        <div className="inputstudent">
+                          <input
+                            type="number"
+                            id="input-pwd"
+                            name="totalfee"
+                            placeholder="Total Fee"
+                            autoComplete="off"
+                            // onChange={handleChange}
+                            required
+                          ></input>
+                        </div>
+
+                        <div className="inputstudent">
+                          <input
+                            type="number"
+                            name="pendingfee"
+                            placeholder="Pending Fee"
+                            autoComplete="off"
+                            // onChange={handleChange}
+                            required
+                          ></input>
+                        </div>
                       </div>
                     </div>
-                    {/* {errors.confirmpassword && (
-                    <p style={{ color: "red", textAlign: "center" }}>
-                      {errors.confirmpassword}
-                    </p>
-                  )} */}
                     <Modal.Footer>
-                      <Button variant="secondary" onClick={handleClose}>
-                        Close
-                      </Button>
                       <button type="submit" id="btn-createrefmodal">
                         Create
                       </button>
@@ -282,7 +298,9 @@ function Studentpage() {
                   </form>
                 </Modal.Body>
               </Modal>
-              <div id="reftable"></div>
+              <div id="reftable">
+                <StudentTable />
+              </div>
             </Container>
           </div>
         </div>

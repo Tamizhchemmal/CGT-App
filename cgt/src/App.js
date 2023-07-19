@@ -40,6 +40,14 @@ function App() {
             </PorotectedStudentDetails>
           }
         ></Route>
+        <Route
+          path="/trainerpage"
+          element={
+            <PorotectedTrainerDetails>
+              <Studentpage />
+            </PorotectedTrainerDetails>
+          }
+        ></Route>
         <Route path="/" element={<Adminlogin />}></Route>
         <Route path="/home" element={<HomePage />}></Route>
       </Routes>
@@ -71,6 +79,17 @@ const PorotectedStudentDetails = ({ children }) => {
   }
 };
 
+const PorotectedTrainerDetails = ({ children }) => {
+  if (userType == "admin") {
+    return <>{children}</>;
+  } else {
+    return (
+      <div>
+        <h2>No Access</h2>
+      </div>
+    );
+  }
+};
 // login access
 function Adminlogin() {
   const [email, setEmail] = useState("");
@@ -81,11 +100,16 @@ function Adminlogin() {
 
   const submitAdminLogin = (e) => {
     if (email === "abc@gmail.com" && password === "12345") {
-      alert("success");
+      alert("sucess refer");
       setError("");
-      localStorage.setItem("role", "admin");
+      localStorage.setItem("role", "referral");
 
       navigate("/home");
+    } else if (email === "admin" && password === "12345") {
+      alert("admin");
+      setError("");
+      navigate("/home");
+      localStorage.setItem("role", "admin");
     } else if (email !== "abc@gmail.com") {
       setError("Incorrect Email");
       return error;
