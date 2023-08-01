@@ -168,7 +168,7 @@ export default function RefTable() {
                           style={{ fontSize: 16 }}
                           onClick={opnetable}
                         >
-                          {apiData.refInput.fullname}
+                          {apiData.name}
                         </TableCell>
                         <TableCell
                           align="center"
@@ -176,7 +176,7 @@ export default function RefTable() {
                           style={{ fontSize: 16 }}
                           onClick={opnetable}
                         >
-                          {apiData.refInput.mobilenumber}
+                          {apiData.mobilenumber}
                         </TableCell>
                         <TableCell
                           align="center"
@@ -184,7 +184,7 @@ export default function RefTable() {
                           style={{ fontSize: 16 }}
                           onClick={opnetable}
                         >
-                          {apiData.refInput.email}
+                          {apiData.email}
                         </TableCell>
                         <TableCell
                           align="center"

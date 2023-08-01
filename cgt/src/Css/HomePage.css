@@ -4,9 +4,15 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
+#navs{
+  position: sticky;
+  top: 0;
+}
+
 .home-card {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .home-count1,
@@ -25,8 +31,8 @@ input[type=number]::-webkit-outer-spin-button {
   box-shadow: rgba(0, 40, 97, 0.2) 2px 2px 25px;
 }
 
-.inputbatch input {
-  width: 80%;
+.inputbatch input{
+  width: 80% !important;
   padding: 10px 15px;
   border: none;
   outline: none;
@@ -34,6 +40,21 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 10px;
 }
 
+.batchDate{
+  display: flex;
+  flex-direction: row;
+}
+
+.btchDate{
+  display: flex;
+}
+
+#batchstrt,
+#batchend{
+  width: 100px;
+  align-items: center;
+  margin: 15px 0 15px 15px;
+}
 
 .batchdropdown {
   cursor: pointer;
@@ -181,4 +202,10 @@ input[type=number]::-webkit-outer-spin-button {
   .home-count3 {
     font-size: 15px !important;
   }
+}
+ 
+
+
+.mods{
+  z-index: 9999999 !important; 
 }

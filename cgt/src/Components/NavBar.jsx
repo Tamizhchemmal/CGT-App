@@ -7,9 +7,9 @@ import ThreePIcon from "@mui/icons-material/ThreeP";
 import PhotoCameraFrontIcon from "@mui/icons-material/PhotoCameraFront";
 import LogoutIcon from "@mui/icons-material/Logout";
 import Button from "@mui/material/Button";
-import { AppBar } from "@mui/material";
-import { FaBars, FaTimes } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
+
 
 export default function NavBar() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -28,7 +28,7 @@ export default function NavBar() {
 
   return (
     <>
-      <AppBar position="sticky">
+    
         <div className="nav-bar">
           <div className="nav-logo">
             <div>Career</div>
@@ -97,7 +97,7 @@ export default function NavBar() {
           
           </div>
         </div>
-      </AppBar>
+        
     </>
   );
 }
