@@ -185,7 +185,6 @@ export default function HomePage() {
               <Container>
                 <div className="head-ref">
                   <div id="heading-ref">Batch List</div>
-
                   <div
                     style={{
                       display: "flex",
